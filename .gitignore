@@ -1,0 +1,11 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+instance/*.db
+instance/*.sqlite*
+static/products/*
+!static/products/.gitkeep
+.pytest_cache/
+coverage.xml

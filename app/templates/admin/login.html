@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<form class="admin-form" method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><h1>Admin login</h1><label>Email<input type="email" name="email" required></label><label>Password<input type="password" name="password" required></label><button>Sign in</button></form>{% endblock %}
