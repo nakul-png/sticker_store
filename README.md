@@ -1,4 +1,4 @@
-# Sticker Studio
+# PERSONAA
 
 A mobile-friendly Flask e-commerce MVP for stickers. It uses SQLite locally, server-side cart totals, CSRF protection, password-hashed admin access, safe image uploads and a Razorpay-ready checkout.
 

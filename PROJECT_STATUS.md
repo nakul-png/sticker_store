@@ -9,6 +9,7 @@
 - Password-hashed admin login, product/category/order management, and safe image upload filenames/type/size controls.
 - SMTP email service with a no-configuration logging fallback.
 - CSRF protection, escaped Jinja output, protected admin routes, error pages, `.gitignore`, seed data and initial tests.
+- PERSONAA configurable storefront branding and premium responsive hero with optional video/Three.js/GLB layers and static fallbacks.
 
 ## Not performed in this environment
 

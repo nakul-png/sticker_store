@@ -1,1 +1,25 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{% block title %}{{ store_name }}{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head><body><header><a class="brand" href="{{ url_for('main.home') }}">{{ store_name }}</a><nav><a href="{{ url_for('products.listing') }}">Shop</a><a href="{{ url_for('cart.view') }}">Cart ({{ cart_count }})</a><a href="{{ url_for('admin.login') }}">Admin</a></nav></header><main>{% with messages=get_flashed_messages(with_categories=true) %}{% for category,message in messages %}<p class="flash {{ category }}">{{ message }}</p>{% endfor %}{% endwith %}{% block content %}{% endblock %}</main><footer>Made with care · Secure checkout · {{ store_name }}</footer><script src="{{ url_for('static', filename='js/store.js') }}"></script>{% block scripts %}{% endblock %}</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17141c">
+  <title>{% block title %}{{ store_name }}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="{{ url_for('main.home') }}" aria-label="{{ store_name }} home">{{ store_name }}</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="{{ url_for('products.listing') }}">Shop</a>
+      <a href="{{ url_for('cart.view') }}">Cart <span aria-label="items in cart">({{ cart_count }})</span></a>
+      <a href="{{ url_for('admin.login') }}">Admin</a>
+    </nav>
+  </header>
+  <main>{% with messages=get_flashed_messages(with_categories=true) %}{% for category,message in messages %}<p class="flash {{ category }}">{{ message }}</p>{% endfor %}{% endwith %}{% block content %}{% endblock %}</main>
+  <footer>Made with care · Secure checkout · {{ store_name }}</footer>
+  <script src="{{ url_for('static', filename='js/store.js') }}" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

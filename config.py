@@ -34,7 +34,7 @@ class Config:
     MAIL_USE_TLS = os.getenv("MAIL_USE_TLS", "true").lower() == "true"
     ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "admin@example.com")
     ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "change-this-before-first-run")
-    STORE_NAME = os.getenv("STORE_NAME", "Sticker Studio")
+    STORE_NAME = os.getenv("STORE_NAME", "PERSONAA")
     SHIPPING_FLAT_RATE = int(os.getenv("SHIPPING_FLAT_RATE", "49"))
     FREE_SHIPPING_THRESHOLD = int(os.getenv("FREE_SHIPPING_THRESHOLD", "499"))
     UPLOAD_FOLDER = BASE_DIR / "app" / "static" / "products"

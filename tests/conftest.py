@@ -6,7 +6,7 @@ from app.models import Category, Product
 
 @pytest.fixture()
 def app(tmp_path):
-    app = create_app({"TESTING": True, "WTF_CSRF_ENABLED": False, "SQLALCHEMY_DATABASE_URI": f"sqlite:///{tmp_path / 'test.db'}", "SECRET_KEY": "test"})
+    app = create_app({"TESTING": True, "WTF_CSRF_ENABLED": False, "SQLALCHEMY_DATABASE_URI": f"sqlite:///{tmp_path / 'test.db'}", "SECRET_KEY": "test", "PAYMENT_KEY_ID": "", "PAYMENT_KEY_SECRET": ""})
     with app.app_context():
         db.create_all()
         category = Category(name="Test", slug="test")
